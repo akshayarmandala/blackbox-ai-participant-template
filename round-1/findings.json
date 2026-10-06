@@ -1,17 +1,26 @@
 {
   "round": "round-1",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "GK-06",
+  "queries_used": 56,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
-      "direction": "increases",
-      "strength": "strong",
-      "confidence": 0.0,
+      "feature": "route_age_days",
+      "direction": "non_monotonic",
+      "confidence": 0.9,
       "evidence": {
         "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "summary": "With the other inputs held at the high-scoring configuration, route_age_days = 18 produced 0.0430, 46 produced 0.9438, 46.5 produced 0.9421, and 56 produced 0.9306. The score therefore rises strongly toward the mid-40s and decreases again at higher values."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "declared_value",
+      "direction": "decreases",
+      "confidence": 0.8,
+      "evidence": {
+        "query_ids": [],
+        "summary": "Under the tested configuration, declared_value = 25 produced a lower score than declared_value = 0, indicating that increasing declared_value decreased the observed score."
       }
     }
   ]
